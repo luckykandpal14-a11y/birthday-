@@ -1,0 +1,1158 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7 Days For Divyansh ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",Arial,sans-serif;
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 10% 10%,#ffd5e7,transparent 30%),
+        radial-gradient(circle at 90% 90%,#d9c8ff,transparent 30%),
+        linear-gradient(135deg,#fff1f7,#eee7ff);
+    color:#4b2948;
+    overflow:hidden;
+}
+
+/* PROGRESS */
+
+.progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:6px;
+    width:0%;
+    background:linear-gradient(90deg,#ff4f9a,#a855f7);
+    z-index:9999;
+}
+
+/* SLIDES */
+
+.slide{
+    min-height:100vh;
+    width:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.slide.active{
+    display:flex;
+    animation:appear .6s ease;
+}
+
+.card{
+    width:100%;
+    max-width:680px;
+    max-height:90vh;
+    overflow-y:auto;
+    padding:38px 23px;
+    border-radius:32px;
+    background:rgba(255,255,255,.84);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 70px rgba(100,50,100,.18);
+}
+
+.emoji{
+    font-size:65px;
+    animation:bounce 1.4s infinite;
+}
+
+h1{
+    color:#e83e8c;
+    font-size:clamp(2.4rem,10vw,5rem);
+    margin:12px 0;
+}
+
+h2{
+    color:#743f77;
+    margin-bottom:18px;
+}
+
+h3{
+    color:#d63384;
+    margin:15px 0;
+}
+
+p{
+    line-height:1.8;
+}
+
+/* BUTTONS */
+
+button{
+    border:none;
+    padding:14px 25px;
+    margin:8px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.yes{
+    color:white;
+    background:linear-gradient(135deg,#ff4f9a,#f472b6);
+}
+
+.no{
+    background:#eeeeee;
+    color:#555;
+}
+
+.next{
+    color:white;
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+}
+
+.result{
+    display:none;
+    margin:18px 0;
+    padding:15px;
+    background:#fff1f8;
+    border-radius:18px;
+    line-height:1.7;
+}
+
+/* LETTER */
+
+.letter{
+    text-align:left;
+    background:#fffafc;
+    padding:25px 19px;
+    border-radius:23px;
+}
+
+.letter p{
+    margin-bottom:19px;
+}
+
+.highlight{
+    color:#d63384;
+    font-weight:bold;
+}
+
+.signature{
+    text-align:right;
+    color:#d63384;
+    font-weight:bold;
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:9px;
+    height:14px;
+    z-index:99999;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    z-index:1;
+    pointer-events:none;
+    animation:float linear forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateX(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+@keyframes float{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .card{
+        padding:30px 16px;
+        max-height:88vh;
+    }
+
+    button{
+        width:85%;
+    }
+
+    .emoji{
+        font-size:55px;
+    }
+
+    .letter{
+        font-size:.95rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+
+<!-- ================================================= -->
+<!-- 1 — SEPTEMBER 6 -->
+<!-- ================================================= -->
+
+<section class="slide active">
+
+<div class="card">
+
+<div class="emoji">🌸</div>
+
+<h3>6 SEPTEMBER</h3>
+
+<h1>7 DAYS TO GO!</h1>
+
+<h2>Hey Birthday Boy 👀</h2>
+
+<p>
+Your birthday is getting closer...
+</p>
+
+<br>
+
+<p>
+But before the big day,
+I have prepared a tiny challenge for you. 😌
+</p>
+
+<br>
+
+<p>
+Are you ready to survive 7 days of me? 😂❤️
+</p>
+
+<button class="yes" onclick="show('r1','Good answer. 😌 You have officially entered the danger zone. ❤️')">
+YES 😎
+</button>
+
+<button class="no" onclick="show('r1','Too late. You already clicked the button. You are trapped. 😂')">
+NO 😭
+</button>
+
+<div class="result" id="r1"></div>
+
+<button class="next" onclick="nextSlide()">
+START THE GAME →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 2 — SEPTEMBER 6 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">😏</div>
+
+<h3>6 SEPTEMBER — DAY 1</h3>
+
+<h2>First Question</h2>
+
+<p>
+Do you think someone is secretly planning
+something special for your birthday?
+👀
+</p>
+
+<br>
+
+<button class="yes" onclick="show('r2','Hmmmm... very smart. But you still don’t know what is coming. 😌')">
+YES 👀
+</button>
+
+<button class="no" onclick="show('r2','Okay then. Continue being innocent. 😂')">
+NO 😭
+</button>
+
+<div class="result" id="r2"></div>
+
+<button class="next" onclick="nextSlide()">
+DAY 2 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 3 — SEPTEMBER 7 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">😂</div>
+
+<h3>7 SEPTEMBER — DAY 2</h3>
+
+<h1>6 DAYS!</h1>
+
+<h2>Important Question 🚨</h2>
+
+<p>
+Be honest...
+</p>
+
+<br>
+
+<p>
+Do you think you're easy to irritate? 😌
+</p>
+
+<button class="yes" onclick="show('r3','HAHA! At least you are self-aware. 😂❤️')">
+YES
+</button>
+
+<button class="no" onclick="show('r3','Interesting... I have evidence that says otherwise. 😂')">
+NO
+</button>
+
+<div class="result" id="r3"></div>
+
+<button class="next" onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 4 — SEPTEMBER 7 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">❤️</div>
+
+<h3>7 SEPTEMBER — DAY 2</h3>
+
+<h2>Mini Test</h2>
+
+<p>
+Who makes you smile for absolutely no reason?
+</p>
+
+<br>
+
+<button class="yes" onclick="show('r4','Correct answer detected. ❤️😂')">
+ME 🫶🏻
+</button>
+
+<button class="no" onclick="show('r4','ERROR 404: Wrong answer not accepted. 😭😂')">
+Someone else
+</button>
+
+<div class="result" id="r4"></div>
+
+<button class="next" onclick="nextSlide()">
+DAY 3 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 5 — SEPTEMBER 8 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🫶🏻</div>
+
+<h3>8 SEPTEMBER — DAY 3</h3>
+
+<h1>5 DAYS!</h1>
+
+<h2>A Little Reminder</h2>
+
+<p>
+Some people enter your life randomly...
+</p>
+
+<br>
+
+<p>
+and somehow become one of the most important
+parts of it. ❤️
+</p>
+
+<br>
+
+<p>
+Do you think some people are meant to stay
+in our lives for a long time?
+</p>
+
+<button class="yes" onclick="show('r5','Maybe this is one of those stories. 🥹❤️')">
+YES
+</button>
+
+<button class="no" onclick="show('r5','Hmm. I disagree. 😌 Try again tomorrow.')">
+NO
+</button>
+
+<div class="result" id="r5"></div>
+
+<button class="next" onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 6 — SEPTEMBER 8 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🥹</div>
+
+<h3>8 SEPTEMBER — DAY 3</h3>
+
+<h2>Memory Check</h2>
+
+<p>
+Do you remember the date our journey started?
+</p>
+
+<br>
+
+<h1 style="font-size:2.5rem">
+17 DECEMBER 2025 ❤️
+</h1>
+
+<br>
+
+<button class="yes" onclick="show('r6','YES! That date is officially locked in my heart. 🫶🏻')">
+OF COURSE ❤️
+</button>
+
+<button class="no" onclick="show('r6','Excuse me?! 😭 Go revise your notes. 😂')">
+I forgot 😭
+</button>
+
+<div class="result" id="r6"></div>
+
+<button class="next" onclick="nextSlide()">
+DAY 4 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 7 — SEPTEMBER 9 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🎮</div>
+
+<h3>9 SEPTEMBER — DAY 4</h3>
+
+<h1>4 DAYS!</h1>
+
+<h2>Relationship Game 🎮</h2>
+
+<p>
+If we have a tiny fight...
+</p>
+
+<br>
+
+<p>
+Who should say sorry first? 😌
+</p>
+
+<button class="yes" onclick="show('r7','Correct. Congratulations, you have chosen peace. 😂❤️')">
+ME
+</button>
+
+<button class="no" onclick="show('r7','Interesting choice... I will remember this. 👀😂')">
+YOU
+</button>
+
+<div class="result" id="r7"></div>
+
+<button class="next" onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 8 — SEPTEMBER 9 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🤭</div>
+
+<h3>9 SEPTEMBER — DAY 4</h3>
+
+<h2>Choose Carefully</h2>
+
+<p>
+Would you rather receive:
+</p>
+
+<br>
+
+<button class="yes" onclick="show('r8','Good choice. But you still have to survive the rest of this game. 😂')">
+A HUGE BIRTHDAY CAKE 🎂
+</button>
+
+<button class="yes" onclick="show('r8','Correct! But I am still stealing some of your cake. 😂❤️')">
+A SURPRISE FROM ME 💌
+</button>
+
+<div class="result" id="r8"></div>
+
+<button class="next" onclick="nextSlide()">
+DAY 5 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 9 — SEPTEMBER 10 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">✨</div>
+
+<h3>10 SEPTEMBER — DAY 5</h3>
+
+<h1>3 DAYS!</h1>
+
+<h2>Birthday Wish Test 🎂</h2>
+
+<p>
+What do I want most for your birthday?
+</p>
+
+<br>
+
+<button class="yes" onclick="show('r9','YES! Your happiness comes first. ❤️')">
+YOUR HAPPINESS ❤️
+</button>
+
+<button class="no" onclick="show('r9','Wrong. The cake is important too, but YOU are more important. 😂')">
+LOTS OF CAKE 🎂
+</button>
+
+<div class="result" id="r9"></div>
+
+<button class="next" onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 10 — SEPTEMBER 10 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🥰</div>
+
+<h3>10 SEPTEMBER — DAY 5</h3>
+
+<h2>One Honest Question</h2>
+
+<p>
+Do you know how much you matter to me?
+</p>
+
+<br>
+
+<button class="yes" onclick="show('r10','Maybe more than you realize. 🥹❤️')">
+YES
+</button>
+
+<button class="no" onclick="show('r10','Then I guess I need to remind you. ❤️')">
+NO
+</button>
+
+<div class="result" id="r10"></div>
+
+<button class="next" onclick="nextSlide()">
+DAY 6 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 11 — SEPTEMBER 11 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🎁</div>
+
+<h3>11 SEPTEMBER — DAY 6</h3>
+
+<h1>2 DAYS!</h1>
+
+<h2>Almost There 👀</h2>
+
+<p>
+Only TWO DAYS until your birthday!
+</p>
+
+<br>
+
+<p>
+Are you excited?
+</p>
+
+<button class="yes" onclick="show('r11','Good! Because I might be even more excited than you. 😂❤️')">
+YESSS!
+</button>
+
+<button class="no" onclick="show('r11','Too bad. Excitement has already been activated. 😂')">
+NO
+</button>
+
+<div class="result" id="r11"></div>
+
+<button class="next" onclick="nextSlide()">
+NEXT →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 12 — SEPTEMBER 11 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🫂</div>
+
+<h3>11 SEPTEMBER — DAY 6</h3>
+
+<h2>Our 10 Months ❤️</h2>
+
+<p>
+Do you realize that we've already completed
+</p>
+
+<h1 style="font-size:3.5rem">
+10 MONTHS
+</h1>
+
+<p>
+of our journey together?
+</p>
+
+<br>
+
+<p>
+10 months of conversations,
+laughs, arguments, memories,
+and choosing each other. 🫶🏻
+</p>
+
+<button class="yes" onclick="show('r12','And I would choose these memories all over again. ❤️')">
+YES 🥹
+</button>
+
+<button class="no" onclick="show('r12','I refuse to accept that answer. 😂❤️')">
+NO
+</button>
+
+<div class="result" id="r12"></div>
+
+<button class="next" onclick="nextSlide()">
+FINAL DAY TOMORROW →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 13 — SEPTEMBER 12 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">⏳</div>
+
+<h3>12 SEPTEMBER</h3>
+
+<h1>1 DAY LEFT!</h1>
+
+<h2>Tomorrow is YOUR DAY 🎂</h2>
+
+<p>
+After all these little questions,
+teasing moments and silly games...
+</p>
+
+<br>
+
+<p>
+there's only one thing left to ask.
+</p>
+
+<br>
+
+<div style="font-size:1.4rem;font-weight:bold;">
+Are you ready for your birthday surprise? 👀
+</div>
+
+<br>
+
+<button class="yes" onclick="show('r13','Then tomorrow, birthday boy... your final surprise awaits. 🎂❤️')">
+YES ❤️
+</button>
+
+<button class="no" onclick="show('r13','Too late. The surprise is already waiting. 😌😂')">
+NO
+</button>
+
+<div class="result" id="r13"></div>
+
+<button class="next" onclick="nextSlide()">
+GO TO YOUR BIRTHDAY 🎂 →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- 14 — SEPTEMBER 13 -->
+<!-- ================================================= -->
+
+<section class="slide">
+
+<div class="card">
+
+<div class="emoji">🎂</div>
+
+<h3>13 SEPTEMBER</h3>
+
+<h1>HAPPY BIRTHDAY!</h1>
+
+<h2>DIVYANSH ❤️</h2>
+
+<p>
+You made it through all 14 slides. 😂
+</p>
+
+<br>
+
+<div class="letter">
+
+<p>
+<strong>💌 A Digital Letter for Divyansh 💌</strong>
+</p>
+
+<p>
+<strong>
+To: My favourite person, Divyansh ❤️
+</strong>
+<br>
+<strong>
+From: The girl who's really lucky to have you 🫶🏻
+</strong>
+</p>
+
+<p>
+Happy Birthday, Divyansh! 🎂❤️
+</p>
+
+<p>
+I don't even know where to start because there are so many things
+I want to say to you. From
+<span class="highlight">17 December 2025</span>,
+when we started our journey together, to today, we've shared so many
+little moments, conversations, laughs, arguments, and memories.
+And somehow, those little moments have become some of the most
+special parts of my life. 🥹❤️
+</p>
+
+<p>
+And now…
+<span class="highlight">10 months together. 🫶🏻</span>
+<br>
+Ten months of <em>us</em>. Ten months of knowing you,
+understanding you, annoying you 😂, laughing with you,
+and making memories that I'll always keep close to my heart.
+</p>
+
+<p>
+And then came
+<span class="highlight">13 September — your birthday. 🎂✨</span>
+<br>
+A day that feels special to me simply because it's the day
+someone as special as you came into this world.
+</p>
+
+<p>
+I hope this new year of your life brings you everything you wish for.
+I hope you keep smiling, keep growing, and keep believing in yourself.
+And whenever life gets difficult, I hope you remember that there's
+someone cheering for you and wishing the absolute best for you. ❤️
+</p>
+
+<p>
+Thank you for being a part of my life and for giving me so many
+memories to smile about. We may not always be perfect, and we may
+have our little fights and misunderstandings, but what matters to me
+is that
+<span class="highlight">
+we keep choosing each other and keep moving forward together.
+</span>
+🫂❤️
+</p>
+
+<p>
+I'm really grateful for these 10 months with you, Divyansh.
+And on your birthday, I just want you to know that
+<span class="highlight">
+you matter to me more than I can properly put into words.
+</span>
+🥺💗
+</p>
+
+<p>
+So today, forget everything else for a moment and just enjoy your day.
+Smile a little extra, eat lots of cake 🎂😂, make beautiful memories,
+and remember that this birthday is another chapter in your story.
+</p>
+
+<p>
+<strong>
+Happy Birthday once again, Divyansh. ❤️🎂✨
+</strong>
+</p>
+
+<p>
+Here's to your happiness, your dreams, your future…
+and to all the beautiful memories still waiting for us. 🫶🏻
+</p>
+
+<p>
+<strong>
+Happy Birthday to you, my favourite human. ❤️
+</strong>
+</p>
+
+<p class="signature">
+— Yours, always cheering for you 💌
+</p>
+
+</div>
+
+<br>
+
+<h2>
+🎉 YOU UNLOCKED THE BIRTHDAY! 🎉
+</h2>
+
+<p>
+13 September will always be a little more special
+because it's YOUR day. ❤️
+</p>
+
+<br>
+
+<button class="yes" onclick="celebrate()">
+🎊 CELEBRATE!
+</button>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* ================================================= */
+/* SLIDE SYSTEM */
+/* ================================================= */
+
+let currentSlide = 0;
+
+const slides =
+document.querySelectorAll(".slide");
+
+function nextSlide(){
+
+    slides[currentSlide]
+        .classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide =
+            slides.length - 1;
+    }
+
+    slides[currentSlide]
+        .classList.add("active");
+
+    updateProgress();
+
+    createConfetti();
+
+}
+
+
+/* ================================================= */
+/* PROGRESS BAR */
+/* ================================================= */
+
+function updateProgress(){
+
+    const percent =
+        (currentSlide /
+        (slides.length - 1))*100;
+
+    document.getElementById("progress")
+        .style.width =
+        percent+"%";
+}
+
+
+/* ================================================= */
+/* ANSWERS */
+/* ================================================= */
+
+function show(id,message){
+
+    const element =
+        document.getElementById(id);
+
+    element.innerHTML =
+        message;
+
+    element.style.display =
+        "block";
+}
+
+
+/* ================================================= */
+/* CONFETTI */
+/* ================================================= */
+
+function createConfetti(){
+
+    const colors=[
+        "#ff4f9a",
+        "#a855f7",
+        "#ffd43b",
+        "#4dabf7",
+        "#51cf66",
+        "#ff6b6b"
+    ];
+
+    for(let i=0;i<90;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        piece.style.animationDuration =
+            Math.random()*3+3+"s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },7000);
+    }
+}
+
+
+/* ================================================= */
+/* FLOATING HEARTS */
+/* ================================================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML =
+        ["❤️","💗","💕","💖","🫶🏻","✨"]
+        [Math.floor(Math.random()*6)];
+
+    heart.style.left =
+        Math.random()*100+"vw";
+
+    heart.style.animationDuration =
+        Math.random()*4+5+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+}
+
+setInterval(createHeart,800);
+
+
+/* ================================================= */
+/* BIG FINAL CELEBRATION */
+/* ================================================= */
+
+function celebrate(){
+
+    for(let i=0;i<5;i++){
+
+        setTimeout(
+            createConfetti,
+            i*400
+        );
+
+    }
+
+    alert(
+        "🎂 HAPPY BIRTHDAY DIVYANSH! ❤️🎉\n\n" +
+        "10 months of us. 🫶🏻\n" +
+        "And countless memories still to come. ✨"
+    );
+}
+
+
+/* FIRST CONFETTI */
+
+setTimeout(createConfetti,500);
+
+</script>
+
+</body>
+</html>
+```
